@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('cd6b767cb607f45e8fd992c44ba93e5b');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '김초원짱짱짱',
+        description: '이거슨 테스트용입니다',
+        imageUrl:
+          'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMTlfMTAy%2FMDAxNzA1NjU1MTU4MDY3.NB4UgI12_gpNCHPtr3_DrsWUfCZ1lEZEviV6kjruT7Ig.wTU_ETbi_eYVvGuJolaZcU9UkhML5kAuEsk40hx5Rv8g.JPEG.doremicat_incheon%2F%25BA%25EA%25BC%25F4%25B0%25ED%25BE%25E7%25C0%25CC%25BA%25D0%25BE%25E7_%252810%2529.jpg&type=sc960_832',
+        link: {
+          mobileWebUrl: 'http://witty-data.com',
+          webUrl: 'http://witty-data.com',
+        },
+      },
+      social: {
+        likeCount: 999, //99999가 최대입니다
+        commentCount: 999, //99999가 최대입니다
+        sharedCount: 999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '자세히 보기',
+          link: {
+            mobileWebUrl: 'http://witty-data.com',
+            webUrl: 'http://witty-data.com',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
